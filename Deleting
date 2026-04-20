@@ -1,0 +1,3 @@
+db.classname.deleteOne({name: 'larry'})//حذف أول وثيقة تجدها باسم "larry".
+db.classname.deleteMany({fulltime: false})//حذف جميع الوثائق التي يكون فيها الدوام غير كامل.
+db.classname.deleteMany({registerDate: {$exists: false}})//حذف أي وثيقة لا تحتوي على حقل "تاريخ التسجيل".

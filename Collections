@@ -1,0 +1,3 @@
+db.createCollection("my_name", {capped: true, size: 100000, max: 100})//إنشاء Collection محددة الحجم (Capped). بمجرد وصولها لـ 100 وثيقة أو حجم 100 كيلوبايت، ستبدأ بحذف البيانات القديمة تلقائياً لتخزين الجديدة
+show collections//عرض جميع الـ Collections الموجودة في قاعدة البيانات الحالية.
+db.collection_name.drop()//حذف الـ Collection بالكامل مع كل البيانات التي بداخلها.

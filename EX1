@@ -1,0 +1,21 @@
+use FastFoodDelivery
+db.createCollection("batteries")
+db.batteries.insertMany([
+  {"_id":"1", "numéro_série":"s12", "capacité":"20%", "santé_batterie":"bonne", "nombre_cycle":300, "statut":"en service"},
+  {"_id":"2", "numéro_série":"s245", "capacité":"30%", "santé_batterie":"moyenne", "nombre_cycle":700, "statut":"en panne"}
+])
+db.batteries.updateOne(
+  { _id: "2" },
+  { $set: { capacité: "45%", statut: "Entretenue" } }
+)
+db.batteries.find(
+  { capacité: { $ne: "50%" } },
+  { nombre_cycle: 1, santé_batterie: 1, capacité: 1, _id: 0 }
+).sort({ nombre_cycle: -1 })
+db.batteries.aggregate([
+  { $group: { _id: "$nombre_cycle", count: { $sum: 1 } } }
+])
+db.batteries.deleteMany({
+  statut: { $nin: ["en service", "Entretenue"] }
+})
+![Exercise Image](./images/db1.gif)

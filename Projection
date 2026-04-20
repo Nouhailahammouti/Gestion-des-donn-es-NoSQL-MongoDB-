@@ -1,0 +1,2 @@
+db.classname.find({}, {name: true})//إرجاع جميع الوثائق، لكن إظهار حقل "الاسم" فقط (سيظهر الـ ID تلقائياً ما لم تمنعه).
+db.classname.find({}, {_id: false, name: true, age: false})//خفاء الـ ID والعمر، وإظهار الاسم فقط.

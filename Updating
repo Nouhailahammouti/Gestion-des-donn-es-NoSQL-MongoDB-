@@ -1,0 +1,4 @@
+db.classname.updateOne({_id: ...}, {$set: {fulltime: true}})//تحديث وثيقة واحدة. وكما ذكرت، يفضل دائماً استخدام الـ ID لأنه فريد ولا يتكرر لضمان دقة التعديل.
+db.classname.updateOne({name: "nouhaila"}, {$unset: {fulltime: ""}//حذف حقل fulltime تماماً من الوثيقة وليس فقط مسح قيمته.
+db.classname.updateMany({}, {$set: {fulltime: false}})//تحديث جميع الوثائق في الـ Collection وتعيين قيمة fulltime إلى false.
+db.classname.updateOne({fulltime: {$exists: false}}, {$set: {fulltime:true}})//ذا كان حقل fulltime غير موجود أصلاً في الوثيقة، قم بإضافته وتعيين قيمته لـ true.

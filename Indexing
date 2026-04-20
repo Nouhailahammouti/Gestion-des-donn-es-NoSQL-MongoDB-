@@ -1,0 +1,4 @@
+db.classname.createIndex({name: 1})//إنشاء "فهرس" للاسم ليسرع عملية البحث عنه مستقبلاً.
+db.classname.find({name: "larry"}).explain("executionStats")//إظهار تفاصيل تقنية عن كيفية تنفيذ البحث (هل استخدم الفهرس؟ كم استغرق من الوقت؟).
+db.classname.getIndexes()//  عرض قائمة بجميع الفهارس الموجودة في هذه الـ Collection.
+db.classname.dropIndex("index_name")//حذف فهرس معين.

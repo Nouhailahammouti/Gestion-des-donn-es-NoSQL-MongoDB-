@@ -1,0 +1,12 @@
+use DBsalarie //creat database
+db.creatcollection("salarie") //creat the cooletion
+db.salarie.insrtMany([{
+"id":"s1",
+"nomsal":"alami",
+"prenomsal":"sara",
+"function":"tehenecal",
+"":"",},{}])//inset the data
+db.salarie.find().sort(nomsalaire(1))  insert theslarie  ordring crousent (1),decrousent(-1)
+db.salarie.countDoument("function":"technecian")// insert the  salarie number ayent the function tehenecal
+db.salarie.deletOne(id:"s1")// delete  s1
+db.salarie.agregated({$group:id:$function,count{$sum:1}})//  inser the salarie numbre by  function 

@@ -10,3 +10,6 @@ db.salarie.find().sort(nomsalaire(1))  insert theslarie  ordring crousent (1),de
 db.salarie.countDoument("function":"technecian")// insert the  salarie number ayent the function tehenecal
 db.salarie.deletOne(id:"s1")// delete  s1
 db.salarie.agregated({$group:id:$function,count{$sum:1}})//  inser the salarie numbre by  function 
+
+
+'ex2,image'

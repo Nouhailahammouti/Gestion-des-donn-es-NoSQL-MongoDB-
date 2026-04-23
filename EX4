@@ -1,0 +1,38 @@
+USE DBS
+db.creatcllection("semanier')
+db.semanier.inserMany([{...}])
+
+db.semaner.find({},{"them":0,""description":1,"id":0})
+db.semanier.agregate([
+{$match:{"them":"animation3D"}}
+{$project:{ noactivete{$size:$Activete}}}])// 
+# 🍃 MongoDB "Survival" Notes
+
+### 1. The "Count" Decision
+* **Counting Documents (Rows):**
+    `db.coll.countDocuments({ filter })`
+* **Counting Items in a List (Array `[]`):**
+    `db.coll.aggregate([ { $match: { theme: "..." } }, { $project: { result: { $size: "$ArrayField" } } } ])`
+
+### 2. Aggregation Stages ($)
+* **$match**: The "Where" (Filters results first).
+* **$project**: The "View" (Calculates `$size`, renames, or shows/hides fields).
+* **$group**: The "Par" (Groups by a field and calculates totals).
+
+### 3. Quick Operations
+| Action | Syntax |
+| :--- | :--- |
+| **Sort** | `.sort({ field: 1 })` (1 = Up, -1 = Down) |
+| **Update** | `updateOne({ _id: "..." }, { $set: { key: "val" } })` |
+| **Delete** | `deleteMany({ key: { $gt: 10 } })` |
+| **Sub-docs** | Use quotes for dots: `"service.nomser"` |
+
+### 4. Comparison Operators
+* `$gt` / `$lt`:  **>** / **<**
+
+
+db.semaner.updateOne({"id":"s1"},{$set{"coute_jornel":700}})  a simple update from 600 to 700
+db.semnar.deletMany({"durre":{$gt:20}})
+
+* `$gte` / `$lte`: **>=** / **<=**
+* `$ne`: Not equal to

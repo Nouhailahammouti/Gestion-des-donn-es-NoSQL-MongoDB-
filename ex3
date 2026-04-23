@@ -16,7 +16,7 @@ db.event.find({},{them:true,descreption:ture, id:false}) or db.event.find({},{th
  db.event.updateOne({id:"e2"} {$set:{"cot-jornel":600}})//update the cot-jornel from  500 to 600 by using id 
  db.event.deletMany({"durre":{$gt:15}})// delet any event that is  lees than 15 
 
-  "image ex3"
+  "image EX3"
 
  
 

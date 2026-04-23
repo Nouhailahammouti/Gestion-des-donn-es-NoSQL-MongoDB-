@@ -1,0 +1,22 @@
+use DBE //creat a data base
+db.creatcollection("event")// creat a collection
+db.event.insertaMany([{
+"id":"e12",
+"them":"devlopment weeb",
+"descreption":"introdiction au devlopment weeb",
+"cot-jornel":500
+"durre":13,
+"atelaries":  [
+{"id":"1",
+"nomealters":"HTML",
+"descreptionaltesr":"introdiction html",}]},{}])//inerst  the data inside the  collection 
+db.event.find({},{them:true,descreption:ture, id:false}) or db.event.find({},{them:1,descreption:1, id:0})// inster only theme and description
+ db.event.afrigation ([{
+ $match:{"them":"divlopment weeb" }},{$project:{$size:$atrielse}}]) // affcher the atrielse's number   with a condection that the them is devlopment web
+ db.event.updateOne({id:"e2"} {$set:{"cot-jornel":600}})//update the cot-jornel from  500 to 600 by using id 
+ db.event.deletMany({"durre":{$gt:15}})// delet any event that is  lees than 15 
+
+  "image ex3"
+
+ 
+

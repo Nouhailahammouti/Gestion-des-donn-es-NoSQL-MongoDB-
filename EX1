@@ -16,6 +16,6 @@ db.batteries.aggregate([
   { $group: { _id: "$nombre_cycle", count: { $sum: 1 } } }
 ])
 db.batteries.deleteMany({
-  statut: { $nin: ["en service", "Entretenue"] }
+  statut: { $nin: ["en service", "Entretenue"] } It means: "Find all items where the status is NEITHER 'en service' NOR 'Entretenue'."
 })
 ![Exercise Image](./images/db1.gif)

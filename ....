@@ -1,0 +1,19 @@
+1/ use GestionMedecins.
+2/ db.createcollection |('Medecins')
+3/ db.Medecins.insertOne(...
+'tel:[8575757585,77559404]')
+4/db.Medecins.find({spécialité :'pédiatrie'})
+5/db.Medecins.find(DateNaissance:{$gt 2006})
+6/  db.Medecins.updateOne({'nome':'tahiri'}
+{$push{petents:[]}})
+7/  db.Medecins.updateone(  { nom: "Dr Sara", "patients.nom": "Ali" },
+
+{$pull:(      "patients.$.ordonnances": { date: "2026-01-01" }
+))
+
+8/
+ db.Medecins.find({
+$expr:{
+$gte:[{$size :$patients },100]
+}
+ })
